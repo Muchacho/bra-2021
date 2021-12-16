@@ -9,7 +9,7 @@ int Preorities(char operation) {
 	if (operation == LEX_MINUS || operation == LEX_PLUS) {
 		return 2;
 	}
-	if (operation == LEX_STAR || operation == LEX_DIRSLASH) {
+	if (operation == LEX_STAR || operation == LEX_DIRSLASH || operation == LEX_PROCENT) {
 		return 3;
 	}
 }

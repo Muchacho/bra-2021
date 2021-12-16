@@ -1,5 +1,5 @@
 ------ Протокол ------
-Дата: 16.12.2021 18:56:29  
+Дата: 16.12.2021 20:37:27  
 
 ------ Параметры ------
 -in:in.txt
@@ -7,88 +7,46 @@
 -log:log.txt
 
 ------ Исходные данные ------
-Количество символов: 460
-Проигнорировано: 15
-Количество строк: 28
+Количество символов: 144
+Проигнорировано: 4
+Количество строк: 13
 
 ------ Таблица идентификаторов ------
 index      name      type        id type     scope      lexTable index
-    0      main      int         f          global              1
-    1         f      sym         v            main              4
-    2        L0      sym         l            main              6
-    3     strln      int         f            main             11
-    4       str      str         p           strln             14
-    5   strcopy      str         f            main             20
-    6       str      str         p         strcopy             23
-    7      strq      str         p         strcopy             26
-    8    strcon      str         f            main             32
-    9       str      str         p          strcon             35
-   10      strq      str         p          strcon             38
-   11         z      int         v            main             43
-   12         w      int         v            main             47
-   13        L1      int         l            main             49
-   14         q      int         v            main             53
-   15        L2      int         l            main             55
-   16         s      str         v            main             59
-   17        L3      str         l            main             61
-   18         g      str         v            main             65
-   19        L4      str         l            main             67
-   20        L5      str         l            main             70
-   21        L6      sym         l            main             77
-   22        L7      int         l            main            133
+    0        um      int         f          global              2
+    1         x      int         p              um              5
+    2         y      int         v              um             10
+    3        L0      int         l              um             12
+    4        L1      int         l              um             16
+    5        L2      int         l              um             18
+    6      main      int         f          global             26
+    7         z      int         v            main             29
+    8        L3      int         l            main             31
+    9        L4      int         l            main             40
+   10        L5      int         l            main             47
 
 ------ Таблица лексем ------
-m{dti<1>=l<2>;
-dtfi<3>(ti<4>);
-dtfi<5>(ti<6>,ti<7>);
-dtfi<8>(ti<9>,ti<10>);
-dti<11>;
-dti<12>=l<13>;
-dti<14>=l<15>;
-dti<16>=l<17>;
-dti<18>=l<19>;
-pl<20>;
-pi<1>;
-i<1>=l<21>;
-pi<1>;
-pl<20>;
-pi<12>;
-i<12>=i<12>+i<14>;
-pi<12>;
-pi<14>;
-i<14>=i<3>(i<18>);
-i<12>=i<3>(i<16>);
-pi<16>;
-pi<18>;
-i<16>=i<8>(i<16>,i<18>);
-pi<16>;
-rl<22>;
-}------ Синтаксический анализ выполнен без ошибок ------
+tfi<0>(ti<1>){dti<2>=l<3>;
+i<1>=l<4>%l<5>;
+ri<1>;
+};
+m{dti<7>=l<8>;
+pi<7>;
+i<7>=i<0>(l<9>);
+pi<7>;
+rl<10>;
+};
+------ Синтаксический анализ выполнен без ошибок ------
 ------ Семантический анализ выполнен без ошибок ------
 ------ Таблица лексем после польской нотации ------
-m{dti<1>=l<2>;
-dtfi<3>(ti<4>);
-dtfi<5>(ti<6>,ti<7>);
-dtfi<8>(ti<9>,ti<10>);
-dti<11>;
-dti<12>=l<13>;
-dti<14>=l<15>;
-dti<16>=l<17>;
-dti<18>=l<19>;
-pl<20>;
-pi<1>;
-i<1>=l<21>;
-pi<1>;
-pl<20>;
-pi<12>;
-i<12>=i<12>i<14>+;
-pi<12>;
-pi<14>;
-i<14>=i<18>@<3>1;
-i<12>=i<16>@<3>1;
-pi<16>;
-pi<18>;
-i<16>=i<16>i<18>@<8>2;
-pi<16>;
-rl<22>;
-}------ Генерация кода выполнен без ошибок ------
+tfi<0>(ti<1>){dti<2>=l<3>;
+i<1>=l<4>l<5>%;
+ri<1>;
+};
+m{dti<7>=l<8>;
+pi<7>;
+i<7>=l<9>@<0>1;
+pi<7>;
+rl<10>;
+};
+------ Генерация кода выполнен без ошибок ------

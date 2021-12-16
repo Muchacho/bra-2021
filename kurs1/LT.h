@@ -28,6 +28,7 @@
 #define LEX_MINUS		'-'	
 #define LEX_STAR		'*'
 #define LEX_DIRSLASH	'/'
+#define LEX_PROCENT		'%'
 #define LEX_EQUAL		'='
 #define LEX_MORE		'>'
 #define LEX_LESS		'<'

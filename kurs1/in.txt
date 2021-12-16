@@ -1,8 +1,8 @@
 number function um(number x){
 	create number y = 12;
-	x = x * 12;
+	x =  12 % 5;
 	return x;
-}
+};
 main
 {
 	create number z = 0;
@@ -10,4 +10,4 @@ main
 	z=um(2);
 	show z;
 	return 0;
-}
+};

@@ -255,6 +255,19 @@ void CG::Generation::code()
 					out << "\tpush\t\teax\n";
 					out << "\n";
 				}
+				if (lexTable.table[i].lexema == LEX_PROCENT)
+				{
+					out << "\n";
+					out << "\tpop\t\tebx\n";
+					out << "\tpop\t\teax\n";
+					out << "\ttest\t\tebx, ebx\n";
+					out << "\tjz\t\tEXIT_DIV_ON_NULL\n";
+					out << "\tcdq\n";
+					out << "\tidiv\t\tebx\n";
+					out << "\tjo\t\tEXIT_OVERFLOW\n";
+					out << "\tpush\t\tedx\n";
+					out << "\n";
+				}
 				if (lexTable.table[i].lexema == LEX_MORE)
 				{
 					out << "\n";
