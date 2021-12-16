@@ -1,0 +1,13 @@
+number function um(number x){
+	create number y = 12;
+	x = x * 12;
+	return x;
+}
+main
+{
+	create number z = 0;
+	show z;
+	z=um(2);
+	show z;
+	return 0;
+}
